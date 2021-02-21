@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: create
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/randomfactdb
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    initialization-mode: always
+    platform: postgres
+
+  #server.servlet.contextPath=/api
+server:
+  error:
+    path: /error
+    whitelabel:
+      enabled: false
